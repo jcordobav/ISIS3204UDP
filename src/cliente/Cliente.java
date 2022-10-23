@@ -21,11 +21,13 @@ public class Cliente
 	{	
 		System.out.println("Iniciando cliente...\n");
 		
+		String ipServer = "192.168.10.13";
+		
 		String log = "";
 		
 		// Enviar primer mensaje de ACK al servidor
 		byte[] buffer = new byte[100];
-        direccionServidor = InetAddress.getByName("localhost");
+        direccionServidor = InetAddress.getByName(ipServer);
         DatagramSocket socketUDP = new DatagramSocket();
         String mensaje = "ack";
         buffer = mensaje.getBytes();
@@ -59,13 +61,13 @@ public class Cliente
         
         // Enviar segundo mensaje de ACK al servidor
         buffer = new byte[100];
-        direccionServidor = InetAddress.getByName("localhost");
+        direccionServidor = InetAddress.getByName(ipServer);
         mensaje = "ack";
         buffer = mensaje.getBytes();
         pregunta = new DatagramPacket(buffer, buffer.length, direccionServidor, PUERTO_SERVIDOR);
         socketUDP.send(pregunta);
         
-        
+        System.out.println("Hlasss\n");
         
         long timeI = System.currentTimeMillis();
         
@@ -74,6 +76,8 @@ public class Cliente
         peticion = new DatagramPacket(buffer, buffer.length);
         socketUDP.receive(peticion);
         String fileName = getData(peticion.getData());
+        
+        System.out.println("Hlasss\n");
         
         // Recibir tamano del archivo del servidor
         buffer = new byte[100];
