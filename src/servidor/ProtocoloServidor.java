@@ -51,7 +51,7 @@ public class ProtocoloServidor
         // Construir log del servidor
 		String log = "";
 		log += "ID Client: " + numeroThreads +"\n";
-		log += "Port of the client: " + puertoServidor + "\n";
+		log += "Port of the client: " + puertoCliente + "\n";
 		
 		// Recibir segundo mensaje de ack del cliente
 		buffer = new byte[100];
