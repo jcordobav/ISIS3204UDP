@@ -41,7 +41,6 @@ public class Servidor
 		System.out.println("Servidor iniciado...");
 		System.out.println("Ingrese la cantidad de clientes que desea atender en simultaneo: ");
 		int cantClientes = leer.nextInt();
-		//CyclicBarrier bar = new CyclicBarrier(cantClientes);
 		System.out.println("Ingrese el nombre del archivo que desea enviar: ");
 		nombreArchivo = leer.next();
 		

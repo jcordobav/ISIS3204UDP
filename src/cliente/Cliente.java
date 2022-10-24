@@ -21,7 +21,7 @@ public class Cliente
 	{	
 		System.out.println("Iniciando cliente...\n");
 		
-		String ipServer = "192.168.10.13";
+		String ipServer = "192.168.172.149";
 		
 		String log = "";
 		
@@ -68,7 +68,7 @@ public class Cliente
         socketUDP.send(pregunta);
         
         
-        long timeI = System.currentTimeMillis();
+        
         
         // Recibir nombre del archivo del servidor
         buffer = new byte[100];
@@ -87,6 +87,7 @@ public class Cliente
         // Recibir archivo del servidor
         int tamanoInt = Integer.parseInt(tamanoArchivo);
         System.out.println("Recibiendo el archivo\n");
+        long timeI = System.currentTimeMillis();
         String archivo = readFile(tamanoInt, peticion, buffer, socketUDP);
         int bytesRecibidos = archivo.length();
         log += "Bytes recieved:" + bytesRecibidos + " B \n";
