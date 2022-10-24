@@ -48,6 +48,8 @@ public class Servidor
 		
 		String outputLine = readFile(nombreArchivo);
 		
+		System.out.println("El servidor termino de leer el archivo \n");
+		
 		try {
 			ss = new DatagramSocket(PUERTO);
 		} catch (IOException e) {
