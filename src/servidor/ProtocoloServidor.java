@@ -97,7 +97,7 @@ public class ProtocoloServidor
 		Servidor.setLog(log);
 	}
 	
-	public static void sendFile(String file, InetAddress direccion, int puertoCliente, DatagramPacket respuesta, DatagramSocket ss) throws IOException
+	public static void sendFile(String file, InetAddress direccion, int puertoCliente, DatagramPacket respuesta, DatagramSocket ss) throws IOException, InterruptedException
 	{
 		byte[] byteFile = file.getBytes();
 		int tamanoBuffer = 20000;
@@ -121,6 +121,7 @@ public class ProtocoloServidor
 				
 			}
 		}
+		Thread.sleep(100);
 		String mensajeFinal = "termine";
 		newByteFile = new byte[7];
 		newByteFile = mensajeFinal.getBytes();
