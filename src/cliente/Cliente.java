@@ -21,7 +21,7 @@ public class Cliente
 	{	
 		System.out.println("Iniciando cliente...\n");
 		
-		String ipServer = "192.168.172.149";
+		String ipServer = "192.168.172.145";
 		
 		String log = "";
 		
