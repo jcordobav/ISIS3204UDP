@@ -126,7 +126,7 @@ public class Servidor
         
 		try {
 			String nueva = directoryName.replace("bin", "");
-            PrintWriter writer = new PrintWriter(nueva + "/Data/logs/" + h2 + "-server.log", "UTF-8");
+            PrintWriter writer = new PrintWriter(nueva + "Data/logs/" + h2 + "-server.log", "UTF-8");
             writer.println(content);
             writer.close();
         } catch (Exception e) {
@@ -141,7 +141,7 @@ public class Servidor
 		Path path = Paths.get("");
 		String directoryName = path.toAbsolutePath().toString();
 		String nueva = directoryName.replace("bin", "");
-		File doc = new File(nueva + "/Data/" + ar + ".txt");
+		File doc = new File(nueva + "Data/" + ar + ".txt");
 		
 		tamanoArchivo = doc.length();
 
