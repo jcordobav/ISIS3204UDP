@@ -134,6 +134,7 @@ public class Cliente
 			socketUDP.receive(peticion);
 			byte[] bTermine = new byte[7];
 			System.arraycopy(buffer, 0, bTermine, 0, 7);
+			System.out.println(new String(bTermine));
 			if(!(new String(bTermine).equals("termine")))
 			{
 				if(tamanoFile - comienzo >= tamanoBuffer)
