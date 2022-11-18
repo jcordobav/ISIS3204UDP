@@ -21,7 +21,7 @@ public class Cliente
 	{	
 		System.out.println("Iniciando cliente...\n");
 		
-		String ipServer = "192.168.10.18";
+		String ipServer = "192.168.172.145";
 		
 		String log = "";
 		
@@ -134,7 +134,6 @@ public class Cliente
 			socketUDP.receive(peticion);
 			byte[] bTermine = new byte[7];
 			System.arraycopy(buffer, 0, bTermine, 0, 7);
-			System.out.println(new String(bTermine));
 			if(!(new String(bTermine).equals("termine")))
 			{
 				if(tamanoFile - comienzo >= tamanoBuffer)
